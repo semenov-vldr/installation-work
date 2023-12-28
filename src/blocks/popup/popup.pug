@@ -1,0 +1,20 @@
+section.popup#popup
+    .popup__body
+        button.popup__close
+            include ../../img/icons/close_small.svg
+        h2.title-section.popup__title Новый заказ
+
+        form.popup__form
+            label Имя
+                input(placeholder="Введите имя" name="name" autocomplete="off" pattern="^[A-Za-zА-Яа-яЁё\\s]+$" maxlength='25' required)
+            label Номер телефона
+                input(placeholder="+7 (999) 999-99-99" name="phone" data-tel-input required autocomplete="off" maxlength="20")
+
+            button.popup__submit.button.button--accent(type="submit") Оформить заказ
+
+    .popup-message__body-success.body-success
+        h3.popup-message__title.title-section Спасибо!
+        p.popup-message__text В течении 30 минут с вами свяжется менеджер и ответит на все вопросы.
+    .popup-message__body-error.body-error
+        h3.popup-message__title.title-section Ой! Что-то пошло не так!
+        p.popup-message__text Ошибка при отправке формы. Пожалуйста повторите попытку или позвоните нам.

@@ -1,0 +1,23 @@
+html
+  overflow-x: hidden
+  max-width: 100vw
+  scroll-behavior: smooth
+  color: $black
+  background-color: $white
+  font-variant-numeric: lining-nums
+  &.js-block-scroll
+    overflow-y: hidden
+
+body
+  overflow: clip
+  min-height: 100vh
+  display: flex
+  flex-direction: column
+
+main.main
+  display: flex
+  flex-direction: column
+  flex-grow: 1
+  gap: 120px
+  @media (max-width: $width-mobile)
+    gap: 80px

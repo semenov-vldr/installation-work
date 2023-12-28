@@ -1,0 +1,37 @@
+mixin productPage(productData)
+    section.product-page
+        .product-page__container.container.v-line
+            .product-page__header.h-line
+                //a.product-page__back(href="/#equipment")
+                a.product-page__back(href="index.html#equipment")
+                h1.product-page__title=productData.titleFull
+
+            .product-page__grid
+                .product-page__slider-wrap.swiper
+                    .product-page__slider.swiper-wrapper
+
+                      each src in productData.images
+                          img.product-page__slide.swiper-slide(src=src alt=productData.titleFull)
+
+                    button.slider-nav__prev
+                    button.slider-nav__next
+
+                .swiper-pagination
+
+                button.button.button.button--accent.product-page__button.product-page__button--mobile.popup-open Заказать
+
+                .product-page__content
+
+                    .product-page__appointment.product-page-appointment
+                        h2 Назначение
+                        .product-page-appointment__text
+                          each appointment in productData.appointment
+                              p=appointment
+
+                    .product-page__desc.product-page-desc
+                        h2 Описание
+                        .product-page-desc__text
+                          each desc in productData.desc
+                              p=desc
+
+                        button.button.button--accent.product-page__button.product-page__button--tablet.popup-open Заказать

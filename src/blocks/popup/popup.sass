@@ -1,0 +1,102 @@
+.popup
+  position: fixed
+  width: 100%
+  height: 100%
+  z-index: 100
+  left: 0
+  top: 0
+  right: 0
+  bottom: 0
+  display: flex
+  align-items: center
+  justify-content: center
+  color: $black
+  overflow-y: auto
+  transition: $transition
+  background-color: rgba($black, 0.6)
+  backdrop-filter: blur(3px)
+  opacity: 0
+  visibility: hidden
+  padding: 8px
+  &.js-popup-open
+    opacity: 1
+    visibility: visible
+
+  &__body
+    position: relative
+    padding: 40px 32px 32px
+    background-color: $white
+    max-width: 390px
+    width: 100%
+    border-radius: 24px
+    border-top: 7px solid $additional-white
+    border-right: 7px solid $additional-white
+    @media (max-width: $width-mobile)
+      padding: 40px 18px 18px
+
+
+  &__close
+    position: absolute
+    right: 24px
+    top: 24px
+    svg
+      width: 13px
+      height: 13px
+
+  &__title
+    font-weight: 600
+
+  &__form
+    display: flex
+    flex-direction: column
+    align-items: center
+    width: 100%
+    gap: 20px
+    @media (max-width: $width-mobile)
+      gap: 16px
+    label
+      font-size: 18px
+      width: 100%
+      @media (min-width: $width-mobile)
+        max-width: 320px
+    input
+      margin-top: 8px
+      width: 100%
+      display: block
+      padding: 8px
+      min-height: 42px
+      border: 1px solid $lightgrey
+      border-radius: 12px
+      @media (min-width: $width-mobile)
+        min-height: 45px
+      &::placeholder
+        font-variant-numeric: lining-nums
+
+  &__submit
+    font-size: 20px
+    padding: 8px
+    min-height: 48px
+    width: 100%
+    font-weight: 500
+    margin-top: 8px
+    @media (max-width: $width-mobile)
+      margin-top: 16px
+
+  &-message
+    &__title
+      font-family: "RussoOne", sans-serif
+  .popup-message__body-success,
+  .popup-message__body-error
+    display: none
+    text-align: center
+    position: relative
+    padding: 32px
+    background-color: $white
+    max-width: 360px
+    width: 100%
+    @media (max-width: $width-mobile)
+      padding: 32px 16px
+    @media (max-width: $width-mobile)
+      padding: 32px 16px
+    &.visible
+      display: block

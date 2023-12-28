@@ -1,0 +1,19 @@
+section.feedback.scroll-margin#feedback
+    .feedback__container
+        h2.title-section.feedback__title Задать вопрос
+
+        form.feedback__form
+            label Имя
+                input(placeholder="Введите имя" name="name" autocomplete="off" pattern="^[A-Za-zА-Яа-яЁё\\s]+$" maxlength='25' required)
+            label Телефон
+                input(placeholder="+7 (999) 999-99-99" name="phone" data-tel-input required autocomplete="off" maxlength="20")
+
+            button.button.button--accent(type="submit") Заказать звонок
+
+    .feedback__message.feedback-message
+        .feedback-message__body-success.body-success
+            h3.feedback-message__title.title-section Спасибо!
+            p.feedback-message__text В течении 30 минут с вами свяжется менеджер и ответит на все вопросы.
+        .feedback-message__body-error.body-success
+            h3.feedback-message__title.title-section Ой! Что-то пошло не так!
+            p.feedback-message__text Ошибка при отправке формы. Пожалуйста повторите попытку или позвоните нам.

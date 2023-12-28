@@ -1,0 +1,72 @@
+.hidden
+  display: none !important
+
+.visually-hidden
+  position: absolute
+  width: 1px
+  height: 1px
+  margin: -1px
+  border: 0
+  padding: 0
+  white-space: nowrap
+  clip-path: inset(100%)
+  clip: rect(0 0 0 0)
+  overflow: hidden
+
+
+.title-section
+  font-weight: 700
+  @include fontSize(20, 24)
+  margin-bottom: 32px
+  @media (max-width: $width-mobile)
+    margin-bottom: 24px
+
+.flex-center
+  display: flex
+  align-items: center
+  justify-content: center
+
+
+.button
+  display: flex
+  align-items: center
+  justify-content: center
+  font-weight: 700
+  padding: 10px 100px
+  min-height: 54px
+  color: $white
+  transition: $transition
+  line-height: 1
+  width: fit-content
+  font-size: 20px
+  border-radius: 22px
+  @media (max-width: $width-mobile)
+    padding: 8px 24px
+    min-height: 48px
+  &.button--accent
+    background-color: $accent
+    &:hover
+      background-color: $dark-red
+  &.button--outline
+    border: 1px solid $accent
+    &:hover
+      background-color: $dark-red
+      border-color: $dark-red
+
+
+.scroll-margin
+  scroll-margin: 120px
+  @media (max-width: $width-mobile)
+    scroll-margin: 70px
+
+.desktop-hidden
+  @media (min-width: $width-mobile)
+    display: none
+
+.mobile-hidden
+  @media (max-width: $width-mobile)
+    display: none
+
+.tablet-hidden
+  @media (min-width: $width-tablet)
+    display: none

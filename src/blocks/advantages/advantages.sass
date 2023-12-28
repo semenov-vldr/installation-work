@@ -1,0 +1,27 @@
+.advantages
+
+  &__list
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    gap: 40px
+    @media (max-width: $width-mobile)
+      grid-template-columns: 1fr
+
+  &__item
+    text-align: center
+    display: flex
+    flex-direction: column
+    align-items: center
+    @media (max-width: $width-mobile)
+      margin: 0 auto
+      max-width: 90%
+
+  &-item__title
+    margin: 16px 0 8px
+    @include fontSize(20, 24)
+
+  svg
+    height: 120px
+    @media (max-width: $width-mobile)
+      height: 90px
+

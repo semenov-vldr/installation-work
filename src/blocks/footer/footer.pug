@@ -1,0 +1,44 @@
+footer.footer.scroll-margin#footer
+    .footer__container.container
+
+        a.footer__logo(href="index.html")
+            img(src="./assets/img/logo.png" alt="Логотип ООО «Система»")
+
+        address.footer__contacts.footer-contacts
+            h2.footer__title Контакты
+            a.footer-contacts__item(href="tel:+78126482388")
+                include ../../img/icons/phone.svg
+                span +7 (812) 648-23-88
+
+            a.footer-contacts__item.footer-contacts__item--mail(href="mailto:info@radiationmonitors.ru")
+                include ../../img/icons/mail.svg
+                span info@radiationmonitors.ru
+
+            p.footer-contacts__address 197183, г.&nbsp;Санкт-Петербург, ул.&nbsp;Сестрорецкая дом 8, литера А, пом.&nbsp;21-Н, офис&nbsp;7
+
+        .footer__timetable
+            h2.footer__title Часы работы
+            span Пн-Вс
+            span 10:00 - 18:00
+
+        .footer__author.footer-author
+            .footer-author__item
+                span Designed by:
+                a(href="https://t.me/str8zh1")
+                    include ../../img/icons/telegram.svg
+                    | @str8zh1
+            .footer-author__item
+                span Development by:
+                a(href="https://t.me/sinceresv")
+                    include ../../img/icons/telegram.svg
+                    | @sinceresv
+
+        .footer__map
+            #footer-map
+
+        .footer__copyright
+            span © ООО «Система», 2023
+            a.footer__politics(href="##") Политика конфиденциальности
+
+include ../loader/loader
+

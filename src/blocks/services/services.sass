@@ -1,0 +1,32 @@
+.services
+
+  &__list
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    gap: 32px
+    @media (max-width: $width-tablet)
+      grid-template-columns: repeat(2, 1fr)
+    @media (max-width: $width-mobile)
+      grid-template-columns: 1fr
+
+  &-item
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    gap: 16px
+    margin: 0 auto
+    @media (max-width: $width-mobile)
+      gap: 12px
+      max-width: 220px
+
+  svg
+    height: 105px
+    @media (max-width: $width-mobile)
+      height: 90px
+
+
+  &-item__title
+    @include fontSize(16, 20)
+    text-align: center
+    font-weight: 600

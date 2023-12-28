@@ -1,0 +1,23 @@
+.page-404
+  @include fontSize(20, 32)
+  text-align: center
+  display: flex
+  align-items: center
+  justify-content: center
+  min-height: calc(100vh - 86px)
+  @media (max-width: $width-tablet)
+    min-height: calc(100vh - 56px)
+
+  img
+    max-width: 800px
+    width: 100%
+
+  h1
+    margin: 48px 0 32px
+    @media (max-width: $width-mobile)
+      margin-top: 96px
+
+  a
+    text-decoration: underline
+    &:hover
+      color: $accent

@@ -1,0 +1,47 @@
+.header
+  padding: 14px 0
+  min-height: 35px
+  transition: 0.4s ease
+  background-color: $white
+  @media (max-width: $width-tablet)
+    min-height: 50px
+    padding: 12px 0
+
+  &__container
+    display: flex
+    align-items: center
+    gap: 52px
+    @media (max-width: $width-mobile)
+      gap: 16px
+
+  &__logo
+    width: 50px
+    @media (max-width: $width-tablet)
+      width: 40px
+
+  &__nav
+    @media (max-width: $width-mobile)
+      display: none
+
+
+  &__nav-list
+    display: flex
+    align-items: center
+    gap: 32px
+
+  &__nav-item
+    white-space: nowrap
+
+  &__nav-link
+    transition: $transition
+    &:hover
+      color: $accent
+
+  &__tel
+    margin-left: auto
+    white-space: nowrap
+    transition: $transition
+    @media (max-width: $width-tablet)
+      font-size: 16px
+    &:hover
+      text-decoration: underline
