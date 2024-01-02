@@ -118,7 +118,7 @@ if (feedback) {
   var sendMsgTelegram = function sendMsgTelegram(evt) {
     evt.preventDefault();
     var form = evt.target;
-    var message = "<b>\u0417\u0430\u044F\u0432\u043A\u0430 \u0441 \u0441\u0430\u0439\u0442\u0430 \u041E\u041E\u041E \u0421\u0438\u0441\u0442\u0435\u043C\u0430 - \u0420\u0430\u0434\u0438\u0430\u0446\u0438\u043E\u043D\u043D\u043E\u0435 \u043E\u0431\u043E\u0440\u0443\u0434\u043E\u0432\u0430\u043D\u0438\u0435</b>\n";
+    var message = "<b>\u0417\u0430\u044F\u0432\u043A\u0430 \u0441 \u0441\u0430\u0439\u0442\u0430 \u041E\u041E\u041E \u0421\u0438\u0441\u0442\u0435\u043C\u0430 - \u041C\u043E\u043D\u0442\u0430\u0436\u043D\u044B\u0435 \u0440\u0430\u0431\u043E\u0442\u044B</b>\n";
     message += "<b>\u0418\u043C\u044F \u043E\u0442\u043F\u0440\u0430\u0432\u0438\u0442\u0435\u043B\u044F:</b> ".concat(form.name.value, "\n");
     message += "<b>\u0422\u0435\u043B\u0435\u0444\u043E\u043D:</b> ".concat(form.phone.value, "\n");
     axios.post(URL_API, {
@@ -214,22 +214,23 @@ if (popup) {
   };
   var submitPopup = function submitPopup() {
     var submit = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : true;
-    var popupContainer = popup.querySelector(".popup__container");
+    var popupBody = popup.querySelector(".popup__body");
     var messageSuccess = popup.querySelector(".body-success");
     var messageError = popup.querySelector(".body-error");
     var alert;
     submit ? alert = messageSuccess : alert = messageError;
-    popupContainer.classList.add("hidden");
+    popupBody.classList.add("hidden");
     alert.classList.add("visible");
     setTimeout(function () {
       alert.classList.remove("visible");
       popupClose();
+      popupBody.classList.remove("hidden");
     }, 5000);
   };
   var sendMsgTelegram = function sendMsgTelegram(evt) {
     evt.preventDefault();
     var form = evt.target;
-    var message = "<b>\u0417\u0430\u044F\u0432\u043A\u0430 \u0441 \u0441\u0430\u0439\u0442\u0430 \u041E\u041E\u041E \u0421\u0438\u0441\u0442\u0435\u043C\u0430 - \u0420\u0430\u0434\u0438\u0430\u0446\u0438\u043E\u043D\u043D\u043E\u0435 \u043E\u0431\u043E\u0440\u0443\u0434\u043E\u0432\u0430\u043D\u0438\u0435</b>\n";
+    var message = "<b>\u0417\u0430\u044F\u0432\u043A\u0430 \u0441 \u0441\u0430\u0439\u0442\u0430 \u041E\u041E\u041E \u0421\u0438\u0441\u0442\u0435\u043C\u0430 - \u041C\u043E\u043D\u0442\u0430\u0436\u043D\u044B\u0435 \u0440\u0430\u0431\u043E\u0442\u044B</b>\n";
     message += "<b>\u0418\u043C\u044F \u043E\u0442\u043F\u0440\u0430\u0432\u0438\u0442\u0435\u043B\u044F:</b> ".concat(form.name.value, "\n");
     message += "<b>\u0422\u0435\u043B\u0435\u0444\u043E\u043D:</b> ".concat(form.phone.value, "\n");
     axios.post(URL_API, {
