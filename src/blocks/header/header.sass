@@ -1,11 +1,20 @@
 .header
+  position: fixed
+  width: 100%
+  top: 0
+  left: 0
+  background-color: transparent
+  z-index: 2
   padding: 14px 0
   min-height: 35px
-  transition: 0.4s ease
-  background-color: $white
+  color: $white
   @media (max-width: $width-tablet)
     min-height: 50px
     padding: 12px 0
+  &.js-scroll
+    background-color: $white
+    color: $black
+    border-bottom: 1px solid rgba(#000, 0.15)
 
   &__container
     display: flex
