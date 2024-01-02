@@ -29,18 +29,19 @@ if (popup) {
 
 
 function submitPopup (submit = true) {
-  const popupContainer = popup.querySelector(".popup__container");
+  const popupBody = popup.querySelector(".popup__body");
   const messageSuccess = popup.querySelector(".body-success");
   const messageError = popup.querySelector(".body-error");
 
   let alert;
   submit ? alert = messageSuccess : alert = messageError;
-  popupContainer.classList.add("hidden");
+  popupBody.classList.add("hidden");
   alert.classList.add("visible");
 
   setTimeout(() => {
     alert.classList.remove("visible");
     popupClose();
+    popupBody.classList.remove("hidden");
   }, 5000);
 };
 
@@ -50,7 +51,7 @@ function sendMsgTelegram (evt) {
   evt.preventDefault();
   const form = evt.target;
 
-  let message = `<b>Заявка с сайта ООО Система - Радиационное оборудование</b>\n`;
+  let message = `<b>Заявка с сайта ООО Система - Монтажные работы</b>\n`;
 
   message += `<b>Имя отправителя:</b> ${ form.name.value }\n`;
   message += `<b>Телефон:</b> ${ form.phone.value }\n`;

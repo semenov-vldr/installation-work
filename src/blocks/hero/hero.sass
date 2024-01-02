@@ -1,17 +1,36 @@
 .hero
+  position: relative
   display: flex
   align-items: center
   min-height: calc(100vh - 78px)
-  height: 100%
-  padding: 64px 0
   background-color: #D9D9D9
+  background-image: url("../img/cover.jpg")
+  background-size: cover
+  background-repeat: no-repeat
+  background-position: center
   @media (max-width: $width-mobile)
     min-height: calc(100vh - 64px)
     align-items: flex-start
-    padding: 92px 0 0
+  &::after
+    content: ""
+    position: absolute
+    width: 100%
+    height: 100%
+    background-color: rgba($white, 0.7)
+    top: 0
+    left: 0
 
   &__container
+    padding-top: 64px
+    padding-bottom: 64px
+    position: relative
+    z-index: 1
     width: 100%
+    min-height: 70vh
+    display: flex
+    flex-direction: column
+    @media (max-width: $width-mobile)
+      padding-top: 92px
 
   &__title
     @include fontSize(24, 64)
@@ -24,9 +43,9 @@
     @media (max-width: $width-tablet)
       max-width: 80%
     @media (max-width: $width-mobile)
-      margin-bottom: 200px
       max-width: initial
 
   &__button
     @media (max-width: $width-mobile)
       width: 100%
+      margin: auto 0 64px

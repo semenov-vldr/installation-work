@@ -29,7 +29,7 @@ if (feedback) {
     evt.preventDefault();
     const form = evt.target;
 
-    let message = `<b>Заявка с сайта ООО Система - Радиационное оборудование</b>\n`;
+    let message = `<b>Заявка с сайта ООО Система - Монтажные работы</b>\n`;
 
     message += `<b>Имя отправителя:</b> ${ form.name.value }\n`;
     message += `<b>Телефон:</b> ${ form.phone.value }\n`;
