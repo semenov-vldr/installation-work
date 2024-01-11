@@ -213,7 +213,7 @@ if (popup) {
     message += "<b>\u0418\u043C\u044F \u043E\u0442\u043F\u0440\u0430\u0432\u0438\u0442\u0435\u043B\u044F:</b> ".concat(form.name.value, "\n");
     message += "<b>\u0422\u0435\u043B\u0435\u0444\u043E\u043D:</b> ".concat(form.phone.value, "\n");
     if (form.email.value) {
-      message += "<b>\u0422\u0435\u043B\u0435\u0444\u043E\u043D:</b> ".concat(form.email.value, "\n");
+      message += "<b>\u041F\u043E\u0447\u0442\u0430:</b> ".concat(form.email.value, "\n");
     }
     axios.post(URL_API, {
       chat_id: CHAT_ID,
