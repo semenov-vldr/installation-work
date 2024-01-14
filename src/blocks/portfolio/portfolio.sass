@@ -1,0 +1,48 @@
+.portfolio
+
+  &__list
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    gap: 32px
+    overflow-x: scroll
+    &::-webkit-scrollbar
+      width: 0
+      height: 0
+    @media (max-width: $width-tablet)
+      gap: 16px
+      margin-right: -50px
+      padding-right: 50px
+    @media (max-width: $width-mobile)
+      gap: 12px
+      margin-right: -16px
+      padding-right: 16px
+
+  &-item
+    background-color: rgba(#000, 0.05)
+    border-radius: 16px
+    padding: 16px
+    @media (max-width: $width-tablet)
+      min-width: 312px
+    @media (max-width: $width-mobile)
+      padding: 14px
+
+    &__video
+      width: 100%
+      object-fit: cover
+      object-position: center
+      border-radius: 14px
+      aspect-ratio: 34 / 27
+
+    &__title
+      text-align: center
+      font-weight: 600
+      margin: 16px 0 8px
+      @include fontSize(18, 20)
+
+    &__work-list
+      padding-left: 16px
+      display: flex
+      flex-direction: column
+      gap: 4px
+      li
+        list-style: initial
